@@ -14,7 +14,7 @@ std::ostream & operator<<(std::ostream & out, const std::vector< std::vector<T> 
     return out;
 }
 
-// check if valid diagonally
+// check whether valid diagonally
 bool CheckDiagonally(const std::vector<std::vector<bool>> & GRID, int size, int row, int col)
 {
     // check left, upward diagonal
@@ -58,7 +58,7 @@ bool CheckDiagonally(const std::vector<std::vector<bool>> & GRID, int size, int 
 // check if placing in row,col is valid
 bool IsSafe(const std::vector<std::vector<bool>> & GRID, int size, int row, int col)
 {
-    //check in that row
+    //check in this row
     for(int i=0; i<col; ++i)
     {
         if(GRID[row][i])
@@ -91,7 +91,7 @@ bool SolveHelper(std::vector<std::vector<bool>>&GRID, int size, int col)
     return false;
 }
 
-// main recursive solver
+// solve this shit here
 bool Solve(std::vector< std::vector<bool> > & GRID, int size)
 {
     //std::cout << IsSafe(GRID, size, 6,3) << std::endl;
@@ -100,11 +100,16 @@ bool Solve(std::vector< std::vector<bool> > & GRID, int size)
 
 int main()
 {
+    // grid size
     int size = 8;
+
+    // use 2d boolean vector
     std::vector< std::vector<bool> > grid(size, std::vector<bool>(size, false));
 
     if(Solve(grid, size))
         std::cout << grid << std::endl;
+    else
+        std::cout << "lol i am a retard" << std::endl;
 
     return 0;
 }
