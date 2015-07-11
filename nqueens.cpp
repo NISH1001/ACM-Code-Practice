@@ -91,7 +91,7 @@ bool SolveHelper(std::vector<std::vector<bool>>&GRID, int size, int col)
     return false;
 }
 
-// main recursive solver
+// solve this shit
 bool Solve(std::vector< std::vector<bool> > & GRID, int size)
 {
     //std::cout << IsSafe(GRID, size, 6,3) << std::endl;
