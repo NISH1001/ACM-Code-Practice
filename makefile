@@ -1,2 +1,2 @@
 all:
-	g++ -o bin/6991 6991.cpp --std=c++11
+	g++ -o bin/out nqueens.cpp --std=c++11
