@@ -91,7 +91,7 @@ bool SolveHelper(std::vector<std::vector<bool>>&GRID, int size, int col)
     return false;
 }
 
-// solve this shit
+// main recursive solver
 bool Solve(std::vector< std::vector<bool> > & GRID, int size)
 {
     //std::cout << IsSafe(GRID, size, 6,3) << std::endl;
@@ -100,9 +100,10 @@ bool Solve(std::vector< std::vector<bool> > & GRID, int size)
 
 int main()
 {
-    std::vector< std::vector<bool> > grid(8, std::vector<bool>(8, false));
+    int size = 8;
+    std::vector< std::vector<bool> > grid(size, std::vector<bool>(size, false));
 
-    if(Solve(grid, 8))
+    if(Solve(grid, size))
         std::cout << grid << std::endl;
 
     return 0;
